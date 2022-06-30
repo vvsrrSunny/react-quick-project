@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="app">
         <Header />
-        <Child />
+        <Parent />
         <h1>{this.sayHello("sunny")}</h1>
       </div>
     );
