@@ -16,7 +16,8 @@ class Parent extends Component {
         <Child
           userDetails={this.state}
           length={this.state.length}
-          name={this.state.name}
+          newName={this.state.name}
+          {...this.state}
         />
       </div>
     );
