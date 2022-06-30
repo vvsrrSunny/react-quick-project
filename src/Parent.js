@@ -6,13 +6,13 @@ class Parent extends Component {
     this.state = {
       length: 10,
       name: "Raj",
-      data: { id: "234", list: [11, 22, 33, 44] },
+      data: { id: "234", listValues: [11, 22, 33, 44] },
     };
   }
   render() {
     return (
       <div className="parent">
-        <Child />
+        <Child userDetails = {this.state} length = {this.state.length} name = {this.state.name}/>
       </div>
     );
   }
