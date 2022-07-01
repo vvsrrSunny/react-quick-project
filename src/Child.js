@@ -11,7 +11,7 @@ class Child extends Component {
       <div className="app">
         <h1>{this.state.userDetails.name} this is testing </h1>
         <h1>{this.state.newName} this is testing </h1>
-        <button>{this.state.newName} this is testing </button>
+        <button>Click me and check the parent count {this.state.userDetails.childCallsCount}</button>
       </div>
     );
   }
