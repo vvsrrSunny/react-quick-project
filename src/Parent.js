@@ -11,6 +11,13 @@ class Parent extends Component {
       childCallsCount: 0,
     };
   }
+
+  updateChildState(value = 0) {
+    let currentCount = this.state.childCallsCount;
+    currentCount++;
+    this.setState({ childCallsCount: currentCount });
+  }
+
   render() {
     return (
       <div className="parent">
