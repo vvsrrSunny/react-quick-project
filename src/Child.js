@@ -22,8 +22,7 @@ class Child extends Component {
         <h1>{this.state.userDetails.name} this is testing </h1>
         <h1>{this.state.newName} this is testing </h1>
         <button onClick={this.onclickOfButton}>
-          Click me and check the parent count
-          {this.state.numberOfClicks}
+          Click me and check the parent count {this.state.numberOfClicks}
         </button>
         <span>this count at the parent props {this.props.childCallsCount}</span>
       </div>
