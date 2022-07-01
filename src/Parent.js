@@ -8,6 +8,7 @@ class Parent extends Component {
       length: 10,
       name: "Raj",
       data: { id: "234", listValues: [11, 22, 33, 44] },
+      childCallsCount: 0,
     };
   }
   render() {
