@@ -3,12 +3,19 @@ import { Component } from "react";
 class Child extends Component {
   constructor(props) {
     super(props);
-    this.state = { ...this.props };
+    this.state = { ...this.props, numberOfClicks: 0 };
   }
 
   onclickOfButton = () => {
-    this.props.updateParentCountState("12");
+    this.updateTheClicksState();
+
+    this.props.updateParentCountState(this.state.numberOfClicks);
   };
+
+  updateTheClicksState = () => {
+    this.setState({ numberOfClicks: this.state.numberOfClicks + 1 });
+  };
+
   render() {
     return (
       <div className="app">

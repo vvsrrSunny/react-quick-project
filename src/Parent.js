@@ -23,7 +23,7 @@ class Parent extends Component {
     return (
       <div className="parent">
         <Child
-          updateParentCountState={this.syncWithChildState.bind(this)}
+          updateParentCountState={this.syncWithChildState}
           userDetails={this.state}
           length={this.state.length}
           newName={this.state.name}
