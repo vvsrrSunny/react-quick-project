@@ -17,7 +17,7 @@ class Parent extends Component {
     let currentCount = this.state.childCallsCount;
     currentCount++;
     this.setState({ childCallsCount: currentCount });
-  }
+  };
 
   render() {
     return (
