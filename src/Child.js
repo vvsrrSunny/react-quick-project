@@ -6,7 +6,7 @@ class Child extends Component {
     this.state = {...this.props};    
   }
 
-  onclickOfButton () {
+  onclickOfButton = () => {
     this.props.updateParentCountState('12');
   }
   render() {

@@ -12,7 +12,7 @@ class Parent extends Component {
     };
   }
 
-  SyncWithChildState(value = 0) {
+  syncWithChildState = (value) => {
     console.log(value);
     let currentCount = this.state.childCallsCount;
     currentCount++;
@@ -23,7 +23,7 @@ class Parent extends Component {
     return (
       <div className="parent">
         <Child
-          updateParentCountState={this.SyncWithChildState}
+          updateParentCountState={this.syncWithChildState.bind(this)}
           userDetails={this.state}
           length={this.state.length}
           newName={this.state.name}
