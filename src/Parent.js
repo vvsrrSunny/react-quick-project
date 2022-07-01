@@ -13,10 +13,7 @@ class Parent extends Component {
   }
 
   syncWithChildState = (value) => {
-    console.log(value);
-    let currentCount = this.state.childCallsCount;
-    currentCount++;
-    this.setState({ childCallsCount: currentCount });
+    this.setState({ childCallsCount: value });
   };
 
   render() {
