@@ -20,7 +20,22 @@ class Child extends Component {
   updateTheClicksState = () => {
     this.setState({ numberOfClicks: this.state.numberOfClicks + 1 }, () => {
       this.props.updateParentCountState(this.state.numberOfClicks);
+      this.numberOfClicksWatch(this.state.numberOfClicks);
     });
+  };
+
+  numberOfClicksWatch = (val) => {
+    if (val % 4 === 0) {
+      this.setState({ isFourMultiple: true });
+    } else {
+      this.setState({ isFourMultiple: false });
+    }
+
+    if (val % 5 === 0) {
+      this.setState({ isFiveMultiple: true });
+    } else {
+      this.setState({ isFiveMultiple: false});
+    }
   };
 
   render() {
@@ -46,14 +61,22 @@ class Child extends Component {
           </span>
           <Button onClick={this.onclickOfButton}></Button>
           <button onClick={this.onclickOfButton}>
-            Click me and check the parent count (recorder by child ){' '}
+            Click me and check the parent count (recorder by child ){" "}
             {this.state.numberOfClicks}
           </button>
-          <span className={`${this.state.isFourMultiple? 'show': ''} p-2 bg-teal-500 rounded-md font-semibold`}>
+          <span
+            className={`${
+              this.state.isFourMultiple ? "visible" : "invisible"
+            } p-2 bg-teal-500 rounded-md font-semibold`}
+          >
             {" "}
             This is 4 multiple!
           </span>
-          <span className={`${this.state.isFourMultiple? 'show': ''} p-2 bg-teal-500 rounded-md font-semibold`}>
+          <span
+            className={`${
+              this.state.isFiveMultiple ? "visible" : "invisible"
+            } p-2 bg-teal-500 rounded-md font-semibold`}
+          >
             {" "}
             This is 5 multiple!
           </span>
