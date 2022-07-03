@@ -1,6 +1,6 @@
 import { Component } from "react";
 
-class TheButton extends Component {
+class Button extends Component {
   render() {
     return (
       <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
@@ -9,3 +9,5 @@ class TheButton extends Component {
     );
   }
 }
+
+export default Button;

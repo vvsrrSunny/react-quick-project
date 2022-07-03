@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Button from "./Button";
 import Text from "./Text";
 
 class Child extends Component {
@@ -19,8 +20,8 @@ class Child extends Component {
 
   render() {
     return (
-      <div className="child">
-        <div className="flex flex-col text-center bg-slate-200 p-4">
+      <div className="child bg-slate-200 p-4">
+        <div className="flex flex-col text-center">
           <Text
             className="text-red-600"
             name="Persons name"
@@ -33,7 +34,8 @@ class Child extends Component {
           <Text name="Weight" value={this.props.data[0].weight}></Text>
           <Text name="Height" value={this.props.data[0].height}></Text>
         </div>
-        <div className="p-4">
+        <div className="pt-4">
+          <Button></Button>
           <button onClick={this.onclickOfButton}>
             Click me and check the parent count {this.state.numberOfClicks}
           </button>
