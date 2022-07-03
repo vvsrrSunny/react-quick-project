@@ -19,8 +19,7 @@ class Child extends Component {
 
   render() {
     return (
-      <div className="app">
-        <div className="h-16 bg-blue-400"></div>
+      <div className="child">
         <div className="flex flex-col text-center bg-slate-200 p-4">
           <Text
             className="text-red-600"
@@ -31,20 +30,17 @@ class Child extends Component {
             name="data of birth"
             value={this.props.data[0].dateOfBirth}
           ></Text>
-          <Text
-            name="Weight"
-            value={this.props.data[0].weight}
-          ></Text>
-          <Text
-            name="Height"
-            value={this.props.data[0].height}
-          ></Text>
+          <Text name="Weight" value={this.props.data[0].weight}></Text>
+          <Text name="Height" value={this.props.data[0].height}></Text>
         </div>
-
-        <button onClick={this.onclickOfButton}>
-          Click me and check the parent count {this.state.numberOfClicks}
-        </button>
-        <span>this count at the parent props {this.props.childCallsCount}</span>
+        <div className="p-4">
+          <button onClick={this.onclickOfButton}>
+            Click me and check the parent count {this.state.numberOfClicks}
+          </button>
+          <span>
+            this count at the parent props {this.props.childCallsCount}
+          </span>
+        </div>
       </div>
     );
   }
