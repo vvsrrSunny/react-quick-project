@@ -31,6 +31,8 @@ class Child extends Component {
           <button onClick={this.onclickOfButton}>
             Click me and check the parent count (recorder by child ){this.state.numberOfClicks}
           </button>
+          <span className={`p-2 bg-teal-500 rounded-md font-semibold`}> This is 4 multiple!</span>
+          <span className={`p-2 bg-teal-500 rounded-md font-semibold`}> This is 5 multiple!</span>
         </div>
       </div>
     );
