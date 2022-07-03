@@ -21,7 +21,7 @@ class Child extends Component {
   render() {
     return (
       <div className="child bg-slate-200 p-4">
-        <div className="flex flex-col text-center">
+        <div className="flex flex-col text-center pb-5">
           <Text
             className="text-red-600"
             name="Persons name"
@@ -34,8 +34,10 @@ class Child extends Component {
           <Text name="Weight" value={this.props.data[0].weight}></Text>
           <Text name="Height" value={this.props.data[0].height}></Text>
         </div>
-        <div className="pt-4">
-          <Button></Button>
+        <div className=" flex flex-col pt-4 space-y-3 items-center">
+          <span> Number of times the button was clicked (recorded by child) : <span className="bg-green-300 p-1  rounded-full">{this.state.numberOfClicks}</span></span>
+          <span> Number of times the button was clicked at (recorded by parent) : <span className="bg-green-300 p-1 rounded-full">{this.state.numberOfClicks}</span></span>
+          <Button onClick={this.onclickOfButton}></Button>
           <button onClick={this.onclickOfButton}>
             Click me and check the parent count {this.state.numberOfClicks}
           </button>
