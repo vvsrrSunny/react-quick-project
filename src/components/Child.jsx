@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Button from "./Button";
-import Text from "./Text";
+import PersonDetails from "./PersonDetails";
+
 
 class Child extends Component {
   constructor(props) {
@@ -21,19 +22,8 @@ class Child extends Component {
   render() {
     return (
       <div className="child bg-slate-200 p-4">
-        <div className="flex flex-col text-center pb-5">
-          <Text
-            className="text-red-600"
-            name="Persons name"
-            value={this.props.data[0].name}
-          ></Text>
-          <Text
-            name="data of birth"
-            value={this.props.data[0].dateOfBirth}
-          ></Text>
-          <Text name="Weight" value={this.props.data[0].weight}></Text>
-          <Text name="Height" value={this.props.data[0].height}></Text>
-        </div>
+
+        <PersonDetails {...this.state}/>
         <div className=" flex flex-col pt-4 space-y-3 items-center">
           <span> Number of times the button was clicked (data at child from button ) : <span className="bg-green-300 p-1  rounded-full">{this.state.numberOfClicks}</span></span>
           <span> Number of times the button was clicked at (data at parent from child ) : <span className="bg-green-300 p-1 rounded-full">{this.state.numberOfClicks}</span></span>
