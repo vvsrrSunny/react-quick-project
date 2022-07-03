@@ -21,9 +21,10 @@ class Child extends Component {
     return (
       <div className="app">
         <div class="flex flex-col text-center">
-          <Text name="Persons name" value={this.props.data[0].name}>
+          <Text class="text-amber-400" name="Persons name" value={this.props.data[0].name}>
           </Text>
-          <span>data of birth {this.props.data[0].dateOfBirth} </span>
+          <Text name="data of birth" value={this.props.data[0].dateOfBirth}>
+          </Text>
           <span>{this.props.data[0].weight} this is testing </span>
           <span>{this.state.newName} this is testing </span>
         </div>
