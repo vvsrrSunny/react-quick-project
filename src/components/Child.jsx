@@ -35,15 +35,12 @@ class Child extends Component {
           <Text name="Height" value={this.props.data[0].height}></Text>
         </div>
         <div className=" flex flex-col pt-4 space-y-3 items-center">
-          <span> Number of times the button was clicked (recorded by child) : <span className="bg-green-300 p-1  rounded-full">{this.state.numberOfClicks}</span></span>
-          <span> Number of times the button was clicked at (recorded by parent) : <span className="bg-green-300 p-1 rounded-full">{this.state.numberOfClicks}</span></span>
+          <span> Number of times the button was clicked (data at child from button ) : <span className="bg-green-300 p-1  rounded-full">{this.state.numberOfClicks}</span></span>
+          <span> Number of times the button was clicked at (data at parent from child ) : <span className="bg-green-300 p-1 rounded-full">{this.state.numberOfClicks}</span></span>
           <Button onClick={this.onclickOfButton}></Button>
           <button onClick={this.onclickOfButton}>
-            Click me and check the parent count {this.state.numberOfClicks}
+            Click me and check the parent count (recorder by child ){this.state.numberOfClicks}
           </button>
-          <span>
-            this count at the parent props {this.props.childCallsCount}
-          </span>
         </div>
       </div>
     );
