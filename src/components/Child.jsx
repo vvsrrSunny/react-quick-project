@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Text from "./Text";
 
 class Child extends Component {
   constructor(props) {
@@ -20,10 +21,11 @@ class Child extends Component {
     return (
       <div className="app">
         <div class="flex flex-col text-center">
-        <span class="text-amber-400">{this.props.data[0].name} this is testing </span>
-        <span>{this.props.data[0].dateOfBirth} this is testing </span>
-        <span>{this.props.data[0].weight} this is testing </span>
-        <span>{this.state.newName} this is testing </span>
+          <Text key="Persons name" value={this.props.data[0].name}>
+          </Text>
+          <span>data of birth {this.props.data[0].dateOfBirth} </span>
+          <span>{this.props.data[0].weight} this is testing </span>
+          <span>{this.state.newName} this is testing </span>
         </div>
         <button onClick={this.onclickOfButton}>
           Click me and check the parent count {this.state.numberOfClicks}
