@@ -1,5 +1,5 @@
-function Text(props) { 
-return <span className={`${props.class} text-base`}>{props.name} : {props.value} </span>
+function Text({name, value, className}) { 
+return <span className={`${className} text-base`}>{name} : {value} </span>
 }
 
 export default Text;
