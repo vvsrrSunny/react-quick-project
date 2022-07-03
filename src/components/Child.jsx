@@ -22,7 +22,7 @@ class Child extends Component {
       <div className="app">
         <div className="flex flex-col text-center">
           <Text
-            className="text-amber-400"
+            className="text-red-600"
             name="Persons name"
             value={this.props.data[0].name}
           ></Text>
@@ -30,8 +30,14 @@ class Child extends Component {
             name="data of birth"
             value={this.props.data[0].dateOfBirth}
           ></Text>
-          <span>{this.props.data[0].weight} this is testing </span>
-          <span>{this.state.newName} this is testing </span>
+          <Text
+            name="Weight"
+            value={this.props.data[0].weight}
+          ></Text>
+          <Text
+            name="Height"
+            value={this.props.data[0].height}
+          ></Text>
         </div>
         <button onClick={this.onclickOfButton}>
           Click me and check the parent count {this.state.numberOfClicks}
