@@ -15,7 +15,7 @@ class Parent extends Component {
           "wake up in the morning",
           "exercise",
           "work hard",
-          { performance: 100 },
+          { performancePercentage: 100 },
         ],
       },
       childCallsCount: 0,
