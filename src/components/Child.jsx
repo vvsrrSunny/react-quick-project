@@ -46,14 +46,14 @@ class Child extends Component {
           </span>
           <Button onClick={this.onclickOfButton}></Button>
           <button onClick={this.onclickOfButton}>
-            Click me and check the parent count (recorder by child )
+            Click me and check the parent count (recorder by child ){' '}
             {this.state.numberOfClicks}
           </button>
-          <span className={`p-2 bg-teal-500 rounded-md font-semibold`}>
+          <span className={`${this.state.isFourMultiple? 'show': ''} p-2 bg-teal-500 rounded-md font-semibold`}>
             {" "}
             This is 4 multiple!
           </span>
-          <span className={`p-2 bg-teal-500 rounded-md font-semibold`}>
+          <span className={`${this.state.isFourMultiple? 'show': ''} p-2 bg-teal-500 rounded-md font-semibold`}>
             {" "}
             This is 5 multiple!
           </span>
