@@ -25,8 +25,8 @@ class Child extends Component {
 
         <PersonDetails {...this.state}/>
         <div className=" flex flex-col pt-4 space-y-3 items-center">
-          <span> Number of times the button was clicked (data at child from button ) : <span className="bg-green-300 p-1  rounded-full">{this.state.numberOfClicks}</span></span>
-          <span> Number of times the button was clicked at (data at parent from child ) : <span className="bg-green-300 p-1 rounded-full">{this.state.numberOfClicks}</span></span>
+          <span> Number of times the button was clicked (data at child from button ) : <span className="bg-green-300 py-1 px-2  rounded-full">{this.state.numberOfClicks}</span></span>
+          <span> Number of times the button was clicked at (data at parent from child ) : <span className="bg-green-300 py-1 px-2 rounded-full">{this.state.numberOfClicks}</span></span>
           <Button onClick={this.onclickOfButton}></Button>
           <button onClick={this.onclickOfButton}>
             Click me and check the parent count (recorder by child ){this.state.numberOfClicks}
