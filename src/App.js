@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "./App.css";
-import Parent from "./Parent";
+import Parent from "./components/Parent";
 class App extends Component {
   sayHello(name) {
     return `hello ${name}`;
