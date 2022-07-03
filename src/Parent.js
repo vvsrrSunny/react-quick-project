@@ -5,9 +5,11 @@ class Parent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      length: 10,
-      name: "Raj",
-      data: { id: "234", listValues: [11, 22, 33, 44] },
+      dateOfBirth: '01/01/2000',
+      name: "Karthi Gollakota",
+      height: "5.10",
+      weight: 78,
+      data: { id: "1", data: [11, 22, 33, 44] },
       childCallsCount: 0,
     };
   }
