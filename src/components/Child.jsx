@@ -20,7 +20,8 @@ class Child extends Component {
   render() {
     return (
       <div className="app">
-        <div className="flex flex-col text-center">
+        <div className="h-16 bg-blue-400"></div>
+        <div className="flex flex-col text-center bg-slate-200 p-4">
           <Text
             className="text-red-600"
             name="Persons name"
@@ -39,6 +40,7 @@ class Child extends Component {
             value={this.props.data[0].height}
           ></Text>
         </div>
+
         <button onClick={this.onclickOfButton}>
           Click me and check the parent count {this.state.numberOfClicks}
         </button>
