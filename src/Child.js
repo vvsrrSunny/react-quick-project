@@ -19,8 +19,12 @@ class Child extends Component {
   render() {
     return (
       <div className="app">
-        <h1>{this.state.userDetails.name} this is testing </h1>
+        <div class="flex justify-center">
+        <h1 class="text-amber-400">{this.props.data[0].name} this is testing </h1>
+        <h1>{this.props.data[0].dateOfBirth} this is testing </h1>
+        <h1>{this.props.data[0].weight} this is testing </h1>
         <h1>{this.state.newName} this is testing </h1>
+        </div>
         <button onClick={this.onclickOfButton}>
           Click me and check the parent count {this.state.numberOfClicks}
         </button>
