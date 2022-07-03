@@ -20,7 +20,7 @@ class Child extends Component {
   render() {
     return (
       <div className="app">
-        <div class="flex flex-col text-center">
+        <div className="flex flex-col text-center">
           <Text className="text-amber-400" name="Persons name" value={this.props.data[0].name}>
           </Text>
           <Text name="data of birth" value={this.props.data[0].dateOfBirth}>
