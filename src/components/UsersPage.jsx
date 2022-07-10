@@ -37,6 +37,7 @@ class UsersPage extends Component {
                   <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="border-b border-gray-700">
                       <div className="flex items-center justify-between h-16 px-4 sm:px-0">
+                        {/* can be a component */}
                         <div className="flex items-center">
                           <div className="flex-shrink-0">
                             <img
@@ -67,6 +68,7 @@ class UsersPage extends Component {
                             </div>
                           </div>
                         </div>
+                        {/* can be a component  */}
                         <div className="hidden md:block">
                           <div className="ml-4 flex items-center md:ml-6">
                             <button
