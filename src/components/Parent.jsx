@@ -18,12 +18,41 @@ import { useLayoutEffect, useRef, useState } from 'react'
 
 const people = [
   {
-    name: 'Lindsay Walton',
-    title: 'Front-end Developer',
-    email: 'lindsay.walton@example.com',
+    name: 'Matt',
+    title: 'Team Lead',
+    email: 'Matt@example.com',
     role: 'Member',
   },
-  // More people...
+  {
+    name: 'Joush',
+    title: 'Senior Front-end Developer',
+    email: 'Joush@example.com',
+    role: 'Member',
+  },
+  {
+    name: 'Sunny Varanasi',
+    title: 'Software Developer',
+    email: 'sunny.varanasi@example.com',
+    role: 'Member',
+  },
+  {
+    name: 'sam',
+    title: 'Software Developer',
+    email: 'Sam@example.com',
+    role: 'Member',
+  },
+  {
+    name: 'Alex',
+    title: 'Software Developer',
+    email: 'Alex@example.com',
+    role: 'Member',
+  },
+  {
+    name: 'Ben',
+    title: 'Senior Software Developer',
+    email: 'Ben@example.com',
+    role: 'Member',
+  },
 ]
 
 function classNames(...classes) {
