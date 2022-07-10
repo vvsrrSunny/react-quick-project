@@ -26,17 +26,9 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function UsersPage() {
+function UsersPage() {
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         <div className="bg-gray-800 pb-32">
           <Disclosure as="nav" className="bg-gray-800">
@@ -57,7 +49,7 @@ export default function UsersPage() {
                           <div className="ml-10 flex items-baseline space-x-4">
                             {navigation.map((item) => (
                               <a
-                                key={item.name}
+                                key={item.name} 
                                 href={item.href}
                                 className={classNames(
                                   item.current
@@ -207,3 +199,5 @@ export default function UsersPage() {
     </>
   )
 }
+
+export default UsersPage;
