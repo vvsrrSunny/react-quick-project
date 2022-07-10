@@ -30,7 +30,7 @@ class UsersPage extends Component {
     return (
       <>
         <div className="min-h-full">
-            {/* can be component */}
+          {/* can be component */}
           <div className="bg-gray-800 pb-32">
             <Disclosure as="nav" className="bg-gray-800">
               {({ open }) => (
@@ -219,7 +219,12 @@ class UsersPage extends Component {
           </div>
 
           <main className="-mt-32">
-          {this.props.children}
+            <div className="max-w-7xl mx-auto pb-12 px-4 sm:px-6 lg:px-8">
+              {this.props.children}
+              <div className="bg-white rounded-lg shadow px-5 py-6 sm:px-6">
+                <div className="border-4 border-white rounded-lg h-96" />
+              </div>
+            </div>
           </main>
         </div>
       </>
