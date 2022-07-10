@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Parent from "./components/Parent";
+import Parent from "./components/UsersTable";
 class App extends Component {
   sayHello(name) {
     return `hello ${name}`;
