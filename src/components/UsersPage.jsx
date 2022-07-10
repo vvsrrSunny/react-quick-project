@@ -22,7 +22,7 @@ const userNavigation = [
 ];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+  return classes.join(" ");
 }
 
 class UsersPage extends Component {
