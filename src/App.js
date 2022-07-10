@@ -1,6 +1,6 @@
 import { Component } from "react";
 import "./App.css";
-import UsersPage from "./components/UsersPage";
+import AppLayout from "./components/AppLayout";
 class App extends Component {
   sayHello(name) {
     return `hello ${name}`;
@@ -8,7 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <UsersPage />
+        <AppLayout> 
+          
+        </AppLayout>
       </div>
     );
   }
