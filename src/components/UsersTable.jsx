@@ -1,4 +1,5 @@
 import { Component } from "react"
+import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
 
 export default class UserTable extends Component {
@@ -8,30 +9,10 @@ export default class UserTable extends Component {
         <TableLayout>
           <thead className="bg-gray-50">
             <tr>
-              <th
-                scope="col"
-                className="py-3 pl-4 pr-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 sm:pl-6"
-              >
-                Name
-              </th>
-              <th
-                scope="col"
-                className="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500"
-              >
-                Title
-              </th>
-              <th
-                scope="col"
-                className="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500"
-              >
-                Email
-              </th>
-              <th
-                scope="col"
-                className="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500"
-              >
-                Role
-              </th>
+              <TableHeaderCell>Name</TableHeaderCell>
+              <TableHeaderCell>Title</TableHeaderCell>
+              <TableHeaderCell>Email</TableHeaderCell>
+              <TableHeaderCell>Role</TableHeaderCell>
               <th scope="col" className="relative py-3 pl-3 pr-4 sm:pr-6">
                 <span className="sr-only">Edit</span>
               </th>
