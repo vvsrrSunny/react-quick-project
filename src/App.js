@@ -52,7 +52,7 @@ class App extends Component {
     return (
       <div className="app">
         <AppLayout>
-          <UsersTable></UsersTable>
+          <UsersTable people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
     );

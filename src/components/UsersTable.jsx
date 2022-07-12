@@ -1,45 +1,5 @@
 import { Component } from "react"
 
-/* This example requires Tailwind CSS v2.0+ */
-const people = [
-  {
-    name: 'Matt',
-    title: 'Team Lead',
-    email: 'Matt@example.com',
-    role: 'Member',
-  },
-  {
-    name: 'Joush',
-    title: 'Senior Front-end Developer',
-    email: 'Joush@example.com',
-    role: 'Member',
-  },
-  {
-    name: 'Sunny Varanasi',
-    title: 'Software Developer',
-    email: 'sunny.varanasi@example.com',
-    role: 'Member',
-  },
-  {
-    name: 'sam',
-    title: 'Software Developer',
-    email: 'Sam@example.com',
-    role: 'Member',
-  },
-  {
-    name: 'Alex',
-    title: 'Software Developer',
-    email: 'Alex@example.com',
-    role: 'Member',
-  },
-  {
-    name: 'Ben',
-    title: 'Senior Software Developer',
-    email: 'Ben@example.com',
-    role: 'Member',
-  },
-]
-
 export default class UserTable extends Component {
   render() {
     return (
@@ -88,7 +48,7 @@ export default class UserTable extends Component {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200 bg-white">
-                    {people.map((person) => (
+                    {this.props.people.map((person) => (
                       <tr key={person.email}>
                         <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6 lg:pl-8">
                           {person.name}
