@@ -19,7 +19,7 @@ export default class UserTable extends Component {
               </th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200 bg-white">
+          {/* <tbody className="divide-y divide-gray-200 bg-white">
             {this.props.people.map((person) => (
               <tr key={person.email}>
                 <TableCell fontSize="font-medium" paddingXAxis="pl-4 pr-3 sm:pl-6" textColor="text-gray-900">{person.name}</TableCell>
@@ -33,7 +33,7 @@ export default class UserTable extends Component {
                 </td>
               </tr>
             ))}
-          </tbody>
+          </tbody> */}
         </TableLayout>
       </div>
     );
