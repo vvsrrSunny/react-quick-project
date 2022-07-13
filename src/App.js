@@ -15,7 +15,7 @@ class App extends Component {
           role: 'Member',
         },
         {
-          name: 'Joush',
+          name: 'Josh',
           title: 'Senior Front-end Developer',
           email: 'Joush@example.com',
           role: 'Member',
@@ -27,7 +27,7 @@ class App extends Component {
           role: 'Member',
         },
         {
-          name: 'sam',
+          name: 'Sam',
           title: 'Software Developer',
           email: 'Sam@example.com',
           role: 'Member',
