@@ -22,7 +22,7 @@ export default class UserTable extends Component {
           <tbody className="divide-y divide-gray-200 bg-white">
             {this.props.people.map((person) => (
               <tr key={person.email}>
-                <td class="whitespace-nowrap py-4 text-sm font-medium text-gray-900 pl-4 pr-3 sm:pl-6">{person.name}</td>
+                <TableCell fontSize="font-medium" paddingXAxis="pl-4 pr-3 sm:pl-6" textColor="text-gray-900">{person.name}</TableCell>
                 <TableCell>{person.title}</TableCell>
                 <TableCell>{person.email}</TableCell>
                 <TableCell>{person.role}</TableCell>
