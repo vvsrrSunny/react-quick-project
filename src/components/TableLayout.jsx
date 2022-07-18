@@ -15,6 +15,7 @@ export default class TableLayout extends Component {
     render() {
         const { children } = this.props;
         const header = children.find(el => el.type === Header);
+        const body = children.find(el => el.type === Body);
 
         return (<div className="flex flex-col">
             <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
