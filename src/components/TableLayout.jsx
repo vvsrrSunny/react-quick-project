@@ -1,7 +1,15 @@
 import { Component } from "react";
 
+
+function Header() {
+    return null
+  }
 export default class TableLayout extends Component{
+    static Header = Header;
+
     render() {
+        const { children } = this.props;
+        console.log(children);
         return (<div className="flex flex-col">
             <div className="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
                 <div className="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
