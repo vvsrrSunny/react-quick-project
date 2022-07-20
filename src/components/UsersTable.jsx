@@ -2,6 +2,7 @@ import { Component } from "react"
 import TableCell from "./TableCell";
 import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
+import SliderLayout from "./SliderLayout";
 
 export default class UserTable extends Component {
   render() {
@@ -33,6 +34,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
+        <SliderLayout/>
       </div>
     );
   }
