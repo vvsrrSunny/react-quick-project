@@ -9,13 +9,12 @@ export default class Example extends Component {
         super(props);
         this.state = {
             open: true,
-            setOpen: true,
         }
     }
     render() {
         return (
             <Transition.Root show={this.state.open} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={this.setState({ open: true })}>
+                <Dialog as="div" className="relative z-10" onClose={()=> null}>
                     <div className="fixed inset-0" />
 
                     <div className="fixed inset-0 overflow-hidden">
@@ -58,7 +57,7 @@ export default class Example extends Component {
                                                 <button
                                                     type="button"
                                                     className="rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                                                    onClick={() => setOpen(false)}
+                                                    onClick={() => this.setState({ open: false })}
                                                 >
                                                     Cancel
                                                 </button>
