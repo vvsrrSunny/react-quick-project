@@ -15,7 +15,7 @@ export default class Example extends Component {
     render() {
         return (
             <Transition.Root show={this.state.open} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={this.state.setOpen}>
+                <Dialog as="div" className="relative z-10" onClose={this.setState({ open: true })}>
                     <div className="fixed inset-0" />
 
                     <div className="fixed inset-0 overflow-hidden">
@@ -40,7 +40,7 @@ export default class Example extends Component {
                                                             <button
                                                                 type="button"
                                                                 className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                                                                onClick={() => setOpen(false)}
+                                                                onClick={() => this.setState({ open: false })}
                                                             >
                                                                 <span className="sr-only">Close panel</span>
                                                                 <XIcon className="h-6 w-6" aria-hidden="true" />
