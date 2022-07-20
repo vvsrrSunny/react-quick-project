@@ -4,17 +4,18 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 
 export default class Example extends Component {
-    const[open, setOpen] = useState(true)
+    // const[open, setOpen] = useState(true)
     constructor(props) {
         super(props);
         this.state = {
             open: true,
+            setOpen: true,
         }
     }
     render() {
         return (
             <Transition.Root show={this.state.open} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={setOpen}>
+                <Dialog as="div" className="relative z-10" onClose={this.state.setOpen}>
                     <div className="fixed inset-0" />
 
                     <div className="fixed inset-0 overflow-hidden">
