@@ -12,7 +12,9 @@ export default class UserTable extends Component {
     this.sliderRef = React.createRef();
   }
   openSlider = () => {
-    this.sliderRef.current.close();
+    // this works
+    // this.sliderRef.current.setState({open:true});
+    this.sliderRef.current.open();
   };
   render() {
     

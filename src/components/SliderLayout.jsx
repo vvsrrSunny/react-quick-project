@@ -8,11 +8,11 @@ export default class Example extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            open: true,
+            open: false,
         }
     }
-    close = () => {
-        console.log("refs are working ");
+    open = () => {
+        this.setState({open:true});
     }
     render() {
         return (
