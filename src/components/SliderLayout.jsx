@@ -3,7 +3,7 @@ import { Component, Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 
-export default class Example extends Component {
+export default class SliderLayout extends Component {
     // const[open, setOpen] = useState(true)
     constructor(props) {
         super(props);
