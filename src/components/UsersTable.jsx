@@ -43,7 +43,6 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        {/* <SliderLayout ref={this.sliderRef} /> */}
         <TableSlider ref={this.sliderLayoutRef} ></TableSlider>
       </div>
     );
