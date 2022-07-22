@@ -18,6 +18,7 @@ class TableSlider extends Component {
 
 export default React.forwardRef((props, refs) => {
     const { sliderLayoutRef, buttonRef } = refs;
-return(<TableSlider
-    sliderLayoutRef={sliderLayoutRef} buttonRef={buttonRef} {...props}
-/>)});
+    return (<TableSlider
+        sliderLayoutRef={sliderLayoutRef} buttonRef={buttonRef} {...props}
+    />)
+});
