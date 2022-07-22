@@ -4,7 +4,9 @@ import SliderLayout from "./SliderLayout";
 class TableSlider extends Component {
     render() {
         return (
-            <SliderLayout ref={this.props.sliderLayoutRef}></SliderLayout>
+            <SliderLayout ref={this.props.sliderLayoutRef}>
+                
+            </SliderLayout>
         )
     }
 }

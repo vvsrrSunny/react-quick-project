@@ -3,7 +3,6 @@ import React from "react"
 import TableCell from "./TableCell";
 import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
-import SliderLayout from "./SliderLayout";
 import TableCellEdit from "./TableCellEdit";
 import TableSlider from "./TableSlider";
 

@@ -12,12 +12,16 @@ export default class Example extends Component {
         }
     }
     open = () => {
-        this.setState({open:true});
+        this.setState({ open: true });
+    }
+
+    close = () => {
+        this.setState({ open: false });
     }
     render() {
         return (
             <Transition.Root show={this.state.open} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={()=> null}>
+                <Dialog as="div" className="relative z-10" onClose={() => null}>
                     <div className="fixed inset-0" />
 
                     <div className="fixed inset-0 overflow-hidden">
