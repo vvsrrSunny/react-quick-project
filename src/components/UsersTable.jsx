@@ -11,14 +11,13 @@ export default class UserTable extends Component {
     super(props);
     this.sliderRef = React.createRef();
   }
-  openSlider = () => {
-    // this works
-    // this.sliderRef.current.setState({open:true});
+
+  // edit table on click callback
+  onCellClick = () =>{
     this.sliderRef.current.open();
-  };
+  }
+
   render() {
-
-
     return (
       <div>
         <TableLayout>
@@ -29,7 +28,7 @@ export default class UserTable extends Component {
             <TableHeaderCell>Role</TableHeaderCell>
             <th scope="col" className="relative py-3 pl-3 pr-4 sm:pr-6">
               <span className="sr-only">Edit</span>
-            </th>
+            </th>                                                                                     
           </TableLayout.Header>
           <TableLayout.Body>
             {this.props.people.map((person) => (
@@ -38,7 +37,7 @@ export default class UserTable extends Component {
                 <TableCell>{person.title}</TableCell>
                 <TableCell>{person.email}</TableCell>
                 <TableCell>{person.role}</TableCell>
-                <TableCellEdit person={person}></TableCellEdit>
+                <TableCellEdit person={person} onCellClick= {this.onCellClick}></TableCellEdit>
               </tr>
             ))}
           </TableLayout.Body>
