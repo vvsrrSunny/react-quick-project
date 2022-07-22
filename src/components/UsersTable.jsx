@@ -10,13 +10,12 @@ import TableSlider from "./TableSlider";
 export default class UserTable extends Component {
   constructor(props) {
     super(props);
-    this.sliderRef = React.createRef();
-    console.log(this.sliderRef);
+    this.sliderLayoutRef = React.createRef();
   }
 
   // edit table on click callback
   onCellClick = () => {
-    this.sliderRef.current.open();
+    this.sliderLayoutRef.current.open();
   }
 
   render() {
@@ -45,7 +44,7 @@ export default class UserTable extends Component {
           </TableLayout.Body>
         </TableLayout>
         {/* <SliderLayout ref={this.sliderRef} /> */}
-        <TableSlider ref={this.sliderRef} ></TableSlider>
+        <TableSlider ref={this.sliderLayoutRef} ></TableSlider>
       </div>
     );
   }
