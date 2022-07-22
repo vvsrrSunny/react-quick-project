@@ -11,6 +11,9 @@ export default class Example extends Component {
             open: true,
         }
     }
+    close = () => {
+        console.log("refs are working ");
+    }
     render() {
         return (
             <Transition.Root show={this.state.open} as={Fragment}>

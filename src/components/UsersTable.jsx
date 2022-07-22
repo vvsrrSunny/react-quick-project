@@ -1,4 +1,5 @@
 import { Component } from "react"
+import  React from "react"
 import TableCell from "./TableCell";
 import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
@@ -6,7 +7,16 @@ import SliderLayout from "./SliderLayout";
 import TableCellEdit from "./TableCellEdit";
 
 export default class UserTable extends Component {
+  constructor(props) {
+    super(props);
+    this.sliderRef = React.createRef();
+  }
+  openSlider = () => {
+    this.sliderRef.current.close();
+  };
   render() {
+    
+
     return (
       <div>
         <TableLayout>
@@ -27,15 +37,15 @@ export default class UserTable extends Component {
                 <TableCell>{person.email}</TableCell>
                 <TableCell>{person.role}</TableCell>
                 <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
-                  <a href="#" className="text-indigo-600 hover:text-indigo-900">
-                    Edit<span className="sr-only">, {this.props.person.name}</span>
+                  <a href="#" onClick={this.openSlider} className="text-indigo-600 hover:text-indigo-900">
+                    Edit<span className="sr-only">, {person.name}</span>
                   </a>
                 </td>
               </tr>
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <SliderLayout />
+        <SliderLayout ref={this.sliderRef}/>
       </div>
     );
   }
