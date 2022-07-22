@@ -10,11 +10,14 @@ export default class UserTable extends Component {
   constructor(props) {
     super(props);
     this.sliderLayoutRef = React.createRef();
+    this.buttonRef = React.createRef();
   }
 
   // edit table on click callback
   onCellClick = () => {
-    this.sliderLayoutRef.current.open();
+    // this.sliderLayoutRef.current.open();
+    console.log(this.sliderLayoutRef.current);
+    console.log(this.buttonRef.current);
   }
 
   render() {
@@ -42,7 +45,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <TableSlider ref={this.sliderLayoutRef} ></TableSlider>
+        <TableSlider ref={{sliderLayoutRef: this.sliderLayoutRef, buttonRef: this.buttonRef}} ></TableSlider>
       </div>
     );
   }

@@ -8,7 +8,7 @@ class TableSlider extends Component {
                 <SliderLayout ref={this.props.sliderLayoutRef}>
 
                 </SliderLayout>
-                <button class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                <button ref={this.props.buttonRef} className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
                     Button 2
                 </button>
             </>
@@ -16,6 +16,8 @@ class TableSlider extends Component {
     }
 }
 
-export default React.forwardRef((props, sliderLayoutRef) => <TableSlider
-    sliderLayoutRef={sliderLayoutRef} {...props}
-/>);
+export default React.forwardRef((props, refs) => {
+    const { sliderLayoutRef, buttonRef } = refs;
+return(<TableSlider
+    sliderLayoutRef={sliderLayoutRef} buttonRef={buttonRef} {...props}
+/>)});
