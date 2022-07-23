@@ -1,5 +1,5 @@
-import { Component } from "react"
-import React from "react"
+import { Component } from "react";
+import React from "react";
 import TableCell from "./TableCell";
 import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
@@ -16,7 +16,7 @@ export default class UserTable extends Component {
   // edit table on click callback
   onCellClick = () => {
     // this.sliderLayoutRef.current.open();
-    console.log(this.sliderLayoutRef.current.open());
+    this.sliderLayoutRef.current.open();
   }
 
   render() {
