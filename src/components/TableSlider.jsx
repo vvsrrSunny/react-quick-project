@@ -1,14 +1,12 @@
 import { Component } from "react";
 import React from "react"
 import SliderLayout from "./SliderLayout";
-class TableSlider extends Component {
-    render() {
+function TableSlider(props) {
         return (
-            <SliderLayout ref={this.props.sliderLayoutRef}>
+            <SliderLayout ref={props.sliderLayoutRef}>
                 
             </SliderLayout>
         )
-    }
 }
 
 export default React.forwardRef((props, sliderLayoutRef) => <TableSlider
