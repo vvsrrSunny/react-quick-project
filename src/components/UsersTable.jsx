@@ -16,8 +16,7 @@ export default class UserTable extends Component {
   // edit table on click callback
   onCellClick = () => {
     // this.sliderLayoutRef.current.open();
-    console.log(this.sliderLayoutRef.current);
-    console.log(this.buttonRef.current);
+    console.log(this.sliderLayoutRef.current.open());
   }
 
   render() {
@@ -45,7 +44,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <TableSlider ref={{sliderLayoutRef: this.sliderLayoutRef, buttonRef: this.buttonRef}} ></TableSlider>
+        <TableSlider ref={ this.sliderLayoutRef} ></TableSlider>
       </div>
     );
   }
