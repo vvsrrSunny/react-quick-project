@@ -3,7 +3,7 @@ import { Component, Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
 
-export default class Example extends Component {
+export default class SliderLayout extends Component {
     // const[open, setOpen] = useState(true)
     constructor(props) {
         super(props);
@@ -12,12 +12,16 @@ export default class Example extends Component {
         }
     }
     open = () => {
-        this.setState({open:true});
+        this.setState({ open: true });
+    }
+
+    close = () => {
+        this.setState({ open: false });
     }
     render() {
         return (
             <Transition.Root show={this.state.open} as={Fragment}>
-                <Dialog as="div" className="relative z-10" onClose={()=> null}>
+                <Dialog as="div" className="relative z-10" onClose={() => null}>
                     <div className="fixed inset-0" />
 
                     <div className="fixed inset-0 overflow-hidden">
