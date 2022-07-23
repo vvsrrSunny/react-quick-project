@@ -9,6 +9,8 @@ function TableSlider(props) {
         )
 }
 
-export default React.forwardRef((props, sliderLayoutRef) => <TableSlider
-sliderLayoutRef={sliderLayoutRef} {...props}
-/>);
+export default TableSlider = React.forwardRef((props, sliderLayoutRef) => { return (
+    <SliderLayout ref={sliderLayoutRef}>
+        
+    </SliderLayout>
+)});
