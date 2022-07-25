@@ -41,7 +41,7 @@ export default class SliderLayout extends Component {
                                             <div className="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
                                                 <div className="px-4 sm:px-6">
                                                     <div className="flex items-start justify-between">
-                                                        <Dialog.Title className="text-lg font-medium text-gray-900"> Panel title </Dialog.Title>
+                                                        <Dialog.Title className="text-lg font-medium text-gray-900"> User </Dialog.Title>
                                                         <div className="ml-3 flex h-7 items-center">
                                                             <button
                                                                 type="button"
@@ -56,6 +56,7 @@ export default class SliderLayout extends Component {
                                                 </div>
                                                 <div className="relative mt-6 flex-1 px-4 sm:px-6">
                                                     {/* Replace with your content */}
+                                                    <hr class="border"/>
                                                     <div>
                                                     {this.props.children}
                                                     </div>
