@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+# config 
+/.dockerignore
+/Dockerfile
+/.git
+/.gitignore
+
 # testing
 /coverage
 
@@ -21,5 +27,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-
