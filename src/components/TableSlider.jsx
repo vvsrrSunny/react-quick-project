@@ -4,7 +4,7 @@ import UserEdit from "./UserEdit";
 const TableSlider = React.forwardRef((props, sliderLayoutRef) => {
     return (
         <SliderLayout ref={sliderLayoutRef}>
-            <UserEdit />
+            <UserEdit person = {props.person}/>
         </SliderLayout>
     )
 });
