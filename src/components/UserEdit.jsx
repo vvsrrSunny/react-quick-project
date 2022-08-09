@@ -1,6 +1,9 @@
 import React from "react"
 import TheInput from "./TheInput";
 const UserEdit = (props) => {
+    const setTxtLetter = (event) => {
+        console.log(event.target.value);
+    }
     return (
 
         <div className="flex flex-col  space-y-4 divide-y-2">
@@ -18,6 +21,8 @@ const UserEdit = (props) => {
                         id="email"
                         className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                         placeholder="you@example.com"
+                        defaultValue="John"
+                        onChange={setTxtLetter}
                         aria-describedby="email-optional"
                     />
                 </div>
