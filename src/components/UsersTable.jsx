@@ -16,7 +16,6 @@ export default class UserTable extends Component {
   // edit table on click callback
   onCellClick = () => {
     // this.sliderLayoutRef.current.open();
-    console.log(this.sliderLayoutRef.current);
     this.sliderLayoutRef.current.open();
   }
 

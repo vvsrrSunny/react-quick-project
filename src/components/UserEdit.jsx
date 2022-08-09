@@ -3,7 +3,7 @@ import TheInput from "./TheInput";
 const UserEdit = (props) => {
     return (
 
-        <div class="flex flex-col  space-y-4 divide-y-2">
+        <div className="flex flex-col  space-y-4 divide-y-2">
             <TheInput />
             <div>
                 <div className="flex justify-between mt-2">
