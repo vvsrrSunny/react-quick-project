@@ -56,7 +56,7 @@ export default class SliderLayout extends Component {
                                                 </div>
                                                 <div className="relative mt-6 flex-1 px-4 sm:px-6">
                                                     {/* Replace with your content */}
-                                                    <hr class="border"/>
+                                                    <hr className="border"/>
                                                     <div>
                                                     {this.props.children}
                                                     </div>

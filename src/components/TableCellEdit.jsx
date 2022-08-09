@@ -2,7 +2,7 @@ import { Component } from "react";
 
 export default class TableCellEdit extends Component {
     cellClicked = () => {
-        this.props.onCellClick();
+        this.props.onCellClick(this.props.person);
     }
     render() {
         return (
