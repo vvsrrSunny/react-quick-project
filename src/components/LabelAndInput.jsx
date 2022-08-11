@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 const LabelAndInput = (props) => {
-    const [editedPerson, setEditedPerson] = useState({...props.person});
+    const [editedPerson, setEditedPerson] = useState(props.person);
 
     const setTxtLetter = (event) => {
         let tempPerson = editedPerson;
         tempPerson[props.personValueKey] = event.target.value;
-        setEditedPerson(...tempPerson);
-        // make a call to the parent and let it know 
+        setEditedPerson(tempPerson);
+        // make a call to the parent and let it know
+        props.editCallback(editedPerson); 
     }
     
     return (<div>
@@ -22,7 +23,7 @@ const LabelAndInput = (props) => {
                 id="email"
                 className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
                 placeholder="Name"
-                defaultValue={props.person[props.personValueKey]}
+                defaultValue={props.value}
                 onChange={setTxtLetter}
                 aria-describedby="email-optional"
             />
