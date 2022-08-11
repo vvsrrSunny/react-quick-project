@@ -1,4 +1,4 @@
-const TheInput = (props) => {
+const LabelAndInput = (props) => {
     const setTxtLetter = (event) => {
         console.log(event.target.value);
     }
@@ -23,4 +23,4 @@ const TheInput = (props) => {
     </div>)
 };
 
-export default TheInput;
+export default LabelAndInput;
