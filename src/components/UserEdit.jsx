@@ -5,12 +5,11 @@ const UserEdit = (props) => {
         console.log(event.target.value);
     }
     return (
-
         <div className="flex flex-col space-y-4 divide-y-2">
-            <LabelAndInput labelName='Name' value={props.person.name}/>
-            <LabelAndInput labelName='Title' value={props.person.title}/>
-            <LabelAndInput labelName='Email' value={props.person.email}/>
-            <LabelAndInput labelName='Role' value={props.person.role}/>
+            <LabelAndInput personValueKey='name' value={props.person.name} person={props.person}/>
+            <LabelAndInput personValueKey='title' value={props.person.title} person={props.person}/>
+            <LabelAndInput personValueKey='email' value={props.person.email} person={props.person}/>
+            <LabelAndInput personValueKey='role' value={props.person.role} person={props.person}/>
         </div>
     )
 };
