@@ -7,7 +7,7 @@ const UserEdit = (props) => {
     return (
 
         <div className="flex flex-col  space-y-4 divide-y-2">
-            <TheInput />
+            <TheInput labelName='Name' vale={props.person.name}/>
             <div>
                 <div className="flex justify-between mt-2">
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700">
