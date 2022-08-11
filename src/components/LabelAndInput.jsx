@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 const LabelAndInput = (props) => {
-    const setTxtLetter = (event) => {
-        console.log(props.person[props.key]);
-    }
-    // const [myKey, setMyKey] = useState("");
-    // useEffect(() => {
-    //     setMyKey = props.key;
-        
-    //   });
+    const [editedPerson, setEditedPerson] = useState({...props.person});
 
+    const setTxtLetter = (event) => {
+        let tempPerson = editedPerson;
+        tempPerson[props.personValueKey] = event.target.value;
+        setEditedPerson(...tempPerson);
+        // make a call to the parent and let it know 
+    }
+    
     return (<div>
         <div className="flex justify-between mt-2">
             <label htmlFor="email" className="capitalize block text-sm font-medium text-gray-700">
-            {props.personValueKey}
+                {props.personValueKey}
             </label>
         </div>
         <div className="mt-1">
