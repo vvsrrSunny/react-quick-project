@@ -32,6 +32,7 @@ export default class UserTable extends Component {
   }
   updatePeople = (updatedPerson) => {
     console.log(updatedPerson);
+
   }
 
   render() {
