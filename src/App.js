@@ -1,4 +1,5 @@
 import { Component } from "react";
+import React from "react";
 import "./App.css";
 import AppLayout from "./components/AppLayout";
 import UsersTable from "./components/UsersTable";
@@ -6,6 +7,8 @@ class App extends Component {
 
   constructor(props) {
     super(props);
+    this.usersTable = React.createRef();
+
     this.state = {
       people: [
         {
@@ -53,23 +56,26 @@ class App extends Component {
       ],
     };
   }
+
   updatePeople = (updatedPerson) => {
     const newPeopleState = this.state.people.map(person => {
       // 👇️ update the person if the id matches 
       if (person.id == updatedPerson.id) {
         return { ...updatedPerson };
       }
-      console.log(person.id, updatedPerson.id);
       return person;
     });
     this.setState({people:newPeopleState});
+
+    // close the slider
+    this.usersTable.current.closeSlider();
   }
 
   render() {
     return (
       <div className="app">
         <AppLayout>
-          <UsersTable updatePeople={this.updatePeople} people={this.state.people}></UsersTable>
+          <UsersTable ref={this.usersTable} updatePeople={this.updatePeople} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
     );

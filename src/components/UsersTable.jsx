@@ -31,6 +31,11 @@ export default class UserTable extends Component {
     this.setState({person: person});
   }
 
+  closeSlider = () => {
+    // this.sliderLayoutRef.current.open();
+    this.sliderLayoutRef.current.close();
+  }
+
   render() {
     return (
       <div>
