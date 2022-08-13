@@ -53,12 +53,15 @@ class App extends Component {
       ],
     };
   }
+  updatePeople = (updatedPerson) => {
+    console.log(updatedPerson);
+  }
 
   render() {
     return (
       <div className="app">
         <AppLayout>
-          <UsersTable people={this.state.people}></UsersTable>
+          <UsersTable updatePeople = {this.updatePeople} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
     );

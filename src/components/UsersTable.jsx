@@ -31,8 +31,7 @@ export default class UserTable extends Component {
     this.setState({person: person});
   }
   updatePeople = (updatedPerson) => {
-    console.log(updatedPerson);
-
+    this.props.updatePeople(updatedPerson);
   }
 
   render() {
