@@ -5,6 +5,8 @@ const UserEdit = (props) => {
 
     const updatedPerson = (person) => {
         setEditPerson(person);
+
+        props.setEditPerson(person);
       }
     return (
         <div className="flex flex-col space-y-4 divide-y-2">

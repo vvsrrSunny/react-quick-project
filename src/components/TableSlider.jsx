@@ -1,10 +1,15 @@
-import React from "react"
+import React, { useState } from 'react';
 import SliderLayout from "./SliderLayout";
 import UserEdit from "./UserEdit";
 const TableSlider = React.forwardRef((props, sliderLayoutRef) => {
+
+    const [editPerson, setEditPerson] = useState({...props.person});
+    const updatedPerson = (person) => {
+        setEditPerson(person);
+      }
     return (
         <SliderLayout ref={sliderLayoutRef}>
-            <UserEdit person = {props.person}/>
+            <UserEdit setEditPerson = {updatedPerson} person = {props.person}/>
         </SliderLayout>
     )
 });
