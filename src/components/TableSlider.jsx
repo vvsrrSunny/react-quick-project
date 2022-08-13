@@ -4,9 +4,6 @@ import UserEdit from "./UserEdit";
 const TableSlider = React.forwardRef((props, sliderLayoutRef) => {
 
     const [editPerson, setEditPerson] = useState(props.person);
-    // const updatedPerson = (person) => {
-    //     setEditPerson(person);
-    // }
 
     return (
         <SliderLayout ref={sliderLayoutRef} save={() => props.updatePeople(editPerson)}>
