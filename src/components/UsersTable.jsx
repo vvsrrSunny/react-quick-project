@@ -30,9 +30,6 @@ export default class UserTable extends Component {
     // send the data to the slider for the update 
     this.setState({person: person});
   }
-  updatePeople = (updatedPerson) => {
-    this.props.updatePeople(updatedPerson);
-  }
 
   render() {
     return (
@@ -59,7 +56,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <TableSlider updatePeople={this.updatePeople} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
+        <TableSlider updatePeople={(updatedPerson) => this.props.updatePeople(updatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
       </div>
     );
   }
