@@ -54,14 +54,22 @@ class App extends Component {
     };
   }
   updatePeople = (updatedPerson) => {
-    console.log(updatedPerson);
+    const newPeopleState = this.state.people.map(person => {
+      // 👇️ update the person if the id matches 
+      if (person.id == updatedPerson.id) {
+        return { ...updatedPerson };
+      }
+      console.log(person.id, updatedPerson.id);
+      return person;
+    });
+    this.setState({people:newPeopleState});
   }
 
   render() {
     return (
       <div className="app">
         <AppLayout>
-          <UsersTable updatePeople = {this.updatePeople} people={this.state.people}></UsersTable>
+          <UsersTable updatePeople={this.updatePeople} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
     );
