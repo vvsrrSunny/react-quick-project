@@ -72,12 +72,12 @@ class App extends Component {
   }
 
   addUser = () => {
-    console.log("added user is clicked ");
+    console.log("added user is clicked here ");
   }
   render() {
     return (
       <div className="app">
-        <AppLayout addUser= {() => console.log("click is in the app.js ")}>
+        <AppLayout addUser= {this.addUser}>
           <UsersTable ref={this.usersTable} updatePeople={this.updatePeople} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
