@@ -2,6 +2,7 @@
 import { Component, Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import TheButton from "./TheButton";
 
 const user = {
   name: "Sunny",
@@ -214,7 +215,7 @@ class UsersPage extends Component {
             <header className="py-10">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
                 <h1 className="text-3xl font-bold text-white">Dashboard</h1>
-              <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add User</button>
+              <TheButton></TheButton>
               </div>
             </header>
           </div>
