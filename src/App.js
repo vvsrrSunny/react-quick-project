@@ -71,10 +71,13 @@ class App extends Component {
     this.usersTable.current.closeSlider();
   }
 
+  addUser = () => {
+    console.log("added user is clicked ");
+  }
   render() {
     return (
       <div className="app">
-        <AppLayout>
+        <AppLayout addUser= {() => console.log("click is in the app.js ")}>
           <UsersTable ref={this.usersTable} updatePeople={this.updatePeople} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
