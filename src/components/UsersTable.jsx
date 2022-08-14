@@ -28,12 +28,21 @@ export default class UserTable extends Component {
     this.sliderLayoutRef.current.open();
 
     // send the data to the slider for the update 
-    this.setState({person: person});
+    this.setState({ person: person });
   }
 
   closeSlider = () => {
     // this.sliderLayoutRef.current.open();
     this.sliderLayoutRef.current.close();
+  }
+  openSliderForNewUser = () => {
+    this.onCellClick({
+      id: null,
+      name: null,
+      title: null,
+      email: null,
+      role: null,
+    })
   }
 
   render() {

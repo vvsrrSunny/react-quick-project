@@ -72,7 +72,8 @@ class App extends Component {
   }
 
   addUser = () => {
-    console.log("added user is clicked here ");
+        // close the slider
+        this.usersTable.current.openSliderForNewUser();
   }
   render() {
     return (
