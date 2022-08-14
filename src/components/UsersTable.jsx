@@ -61,7 +61,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <TableSlider updatePeople={(updatedPerson) => this.props.updatePeople(updatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
+        <TableSlider updatePeople={this.props.updatePeople} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
       </div>
     );
   }
