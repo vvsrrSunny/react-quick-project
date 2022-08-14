@@ -41,7 +41,7 @@ export default class SliderLayout extends Component {
                                             <div className="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
                                                 <div className="px-4 sm:px-6">
                                                     <div className="flex items-start justify-between">
-                                                        <Dialog.Title className="text-lg font-medium text-gray-900"> Panel title </Dialog.Title>
+                                                        <Dialog.Title className="text-lg font-medium text-gray-900"> User </Dialog.Title>
                                                         <div className="ml-3 flex h-7 items-center">
                                                             <button
                                                                 type="button"
@@ -56,8 +56,10 @@ export default class SliderLayout extends Component {
                                                 </div>
                                                 <div className="relative mt-6 flex-1 px-4 sm:px-6">
                                                     {/* Replace with your content */}
-                                                    <div className="h-full border-2 border-dashed border-gray-200" aria-hidden="true" />
-                                                    {/* /End replace */}
+                                                    <hr className="border"/>
+                                                    <div>
+                                                    {this.props.children}
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div className="flex flex-shrink-0 justify-end px-4 py-4">
@@ -69,6 +71,7 @@ export default class SliderLayout extends Component {
                                                     Cancel
                                                 </button>
                                                 <button
+                                                onClick={() => this.props.save()}
                                                     type="submit"
                                                     className="ml-4 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                                                 >

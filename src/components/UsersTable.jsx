@@ -1,5 +1,5 @@
-import { Component } from "react"
-import React from "react"
+import { Component } from "react";
+import React from "react";
 import TableCell from "./TableCell";
 import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
@@ -11,12 +11,29 @@ export default class UserTable extends Component {
     super(props);
     this.sliderLayoutRef = React.createRef();
     this.buttonRef = React.createRef();
+    this.state = {
+      person: {
+        id: null,
+        name: null,
+        title: null,
+        email: null,
+        role: null,
+      },
+    }
   }
 
   // edit table on click callback
-  onCellClick = () => {
+  onCellClick = (person) => {
     // this.sliderLayoutRef.current.open();
-    console.log(this.sliderLayoutRef.current.open());
+    this.sliderLayoutRef.current.open();
+
+    // send the data to the slider for the update 
+    this.setState({person: person});
+  }
+
+  closeSlider = () => {
+    // this.sliderLayoutRef.current.open();
+    this.sliderLayoutRef.current.close();
   }
 
   render() {
@@ -44,7 +61,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <TableSlider ref={ this.sliderLayoutRef} ></TableSlider>
+        <TableSlider updatePeople={(updatedPerson) => this.props.updatePeople(updatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
       </div>
     );
   }

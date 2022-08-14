@@ -1,16 +1,15 @@
-import { Component } from "react";
-import React from "react"
+import React, { useState } from 'react';
 import SliderLayout from "./SliderLayout";
-class TableSlider extends Component {
-    render() {
-        return (
-            <SliderLayout ref={this.props.sliderLayoutRef}>
-                
-            </SliderLayout>
-        )
-    }
-}
+import UserEdit from "./UserEdit";
+const TableSlider = React.forwardRef((props, sliderLayoutRef) => {
 
-export default React.forwardRef((props, sliderLayoutRef) => <TableSlider
-sliderLayoutRef={sliderLayoutRef} {...props}
-/>);
+    const [editPerson, setEditPerson] = useState(props.person);
+
+    return (
+        <SliderLayout ref={sliderLayoutRef} save={() => props.updatePeople(editPerson)}>
+            <UserEdit setEditPerson={(person) => setEditPerson(person)} person={props.person} />
+        </SliderLayout>
+    )
+});
+
+export default TableSlider;
