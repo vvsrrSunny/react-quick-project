@@ -10,6 +10,9 @@ const LabelAndInput = (props) => {
         props.editCallback(editedPerson);
     }
 
+    const capitalizeString = (data) => {
+        return `${data[0].toUpperCase()}${data.slice(1)}`;
+    }
     return (<div>
         <div className="flex justify-between mt-2">
             <label htmlFor="email" className="capitalize block text-sm font-medium text-gray-700">
@@ -22,7 +25,7 @@ const LabelAndInput = (props) => {
                 name={props.personValueKey}
                 id={props.personValueKey}
                 className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                placeholder={props.personValueKey}
+                placeholder={capitalizeString(props.personValueKey)}
                 defaultValue={props.value}
                 onChange={setTxtLetter}
                 aria-describedby="email-optional"
