@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import LabelAndInput from "./LabelAndInput";
-const UserEdit = (props) => {
+const UserAddAndEdit = (props) => {
     const [editPerson, setEditPerson] = useState({ ...props.person });
 
     const updatedPerson = (person) => {
@@ -18,4 +18,4 @@ const UserEdit = (props) => {
     )
 };
 
-export default UserEdit;
+export default UserAddAndEdit;
