@@ -10,6 +10,7 @@ class App extends Component {
     this.usersTable = React.createRef();
 
     this.state = {
+      peopleCount: 6,
       people: [
         {
           id: 1,
@@ -57,14 +58,14 @@ class App extends Component {
     };
   }
 
-  // addOrUpdatePeople = (newOrUpdatedPerson) => {
-  //   if(newOrUpdatedPerson.id == null) {
-  //     createPerson(newOrUpdatedPerson);
-  //     return;
-  //   }
-  
-  //   updatePerson(newOrUpdatedPerson);
-  // };
+  addOrUpdatePeople = (newOrUpdatedPerson) => {
+    if (newOrUpdatedPerson.id == null) {
+      this.createPerson(newOrUpdatedPerson);
+      return;
+    }
+
+    this.updatePerson(newOrUpdatedPerson);
+  };
 
   updatePerson = (updatedPerson) => {
     const newPeopleState = this.state.people.map(person => {
@@ -74,7 +75,8 @@ class App extends Component {
       }
       return person;
     });
-    this.setState({people:newPeopleState});
+
+    this.setState({ people: newPeopleState });
 
     // close the slider
     this.usersTable.current.closeSlider();
@@ -82,17 +84,23 @@ class App extends Component {
 
   createPerson = (newPerson) => {
     console.log(newPerson);
+    this.setState({ peopleCount: ++this.state.peopleCount });
+    newPerson.id = this.state.peopleCount;
+
+    this.setState({ people: [...this.state.people, newPerson] });
+    // close the slider
+    this.usersTable.current.closeSlider();
   };
 
   addUser = () => {
-        // close the slider
-        this.usersTable.current.openSliderForNewUser();
+    // close the slider
+    this.usersTable.current.openSliderForNewUser();
   }
   render() {
     return (
       <div className="app">
-        <AppLayout addUser= {this.addUser}>
-          <UsersTable ref={this.usersTable} addOrUpdatePeople={this.updatePerson} people={this.state.people}></UsersTable>
+        <AppLayout addUser={this.addUser}>
+          <UsersTable ref={this.usersTable} addOrUpdatePeople={this.addOrUpdatePeople} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
     );
