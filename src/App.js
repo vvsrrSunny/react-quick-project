@@ -57,12 +57,12 @@ class App extends Component {
     };
   }
 
-  updatePeople = (updatedPerson) => {
-    console.log(updatedPerson);
+  AddOrUpdatePeople = (newOrUpdatedPerson) => {
+    console.log(newOrUpdatedPerson);
     const newPeopleState = this.state.people.map(person => {
       // 👇️ update the person if the id matches 
-      if (person.id == updatedPerson.id) {
-        return { ...updatedPerson };
+      if (person.id == newOrUpdatedPerson.id) {
+        return { ...newOrUpdatedPerson };
       }
       return person;
     });
@@ -80,7 +80,7 @@ class App extends Component {
     return (
       <div className="app">
         <AppLayout addUser= {this.addUser}>
-          <UsersTable ref={this.usersTable} AddOrUpdatePeople={this.updatePeople} people={this.state.people}></UsersTable>
+          <UsersTable ref={this.usersTable} AddOrUpdatePeople={this.AddOrUpdatePeople} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
     );
