@@ -6,7 +6,7 @@ const TableSlider = React.forwardRef((props, sliderLayoutRef) => {
     const [editPerson, setEditPerson] = useState(props.person);
 
     return (
-        <SliderLayout ref={sliderLayoutRef} save={() => props.AddOrUpdatePeople(editPerson)}>
+        <SliderLayout ref={sliderLayoutRef} save={() => props.addOrUpdatePeople(editPerson)}>
             <UserAddAndEdit setEditPerson={(person) => setEditPerson(person)} person={props.person} />
         </SliderLayout>
     )

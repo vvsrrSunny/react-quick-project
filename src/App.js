@@ -57,12 +57,20 @@ class App extends Component {
     };
   }
 
-  AddOrUpdatePeople = (newOrUpdatedPerson) => {
-    console.log(newOrUpdatedPerson);
+  // addOrUpdatePeople = (newOrUpdatedPerson) => {
+  //   if(newOrUpdatedPerson.id == null) {
+  //     createPerson(newOrUpdatedPerson);
+  //     return;
+  //   }
+  
+  //   updatePerson(newOrUpdatedPerson);
+  // };
+
+  updatePerson = (updatedPerson) => {
     const newPeopleState = this.state.people.map(person => {
       // 👇️ update the person if the id matches 
-      if (person.id == newOrUpdatedPerson.id) {
-        return { ...newOrUpdatedPerson };
+      if (person.id == updatedPerson.id) {
+        return { ...updatedPerson };
       }
       return person;
     });
@@ -70,7 +78,11 @@ class App extends Component {
 
     // close the slider
     this.usersTable.current.closeSlider();
-  }
+  };
+
+  createPerson = (newPerson) => {
+    console.log(newPerson);
+  };
 
   addUser = () => {
         // close the slider
@@ -80,7 +92,7 @@ class App extends Component {
     return (
       <div className="app">
         <AppLayout addUser= {this.addUser}>
-          <UsersTable ref={this.usersTable} AddOrUpdatePeople={this.AddOrUpdatePeople} people={this.state.people}></UsersTable>
+          <UsersTable ref={this.usersTable} addOrUpdatePeople={this.updatePerson} people={this.state.people}></UsersTable>
         </AppLayout>
       </div>
     );

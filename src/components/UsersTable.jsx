@@ -70,7 +70,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <TableSlider AddOrUpdatePeople={(newOrUpdatedPerson) => this.props.AddOrUpdatePeople(newOrUpdatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
+        <TableSlider addOrUpdatePeople={(newOrUpdatedPerson) => this.props.addOrUpdatePeople(newOrUpdatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
       </div>
     );
   }
