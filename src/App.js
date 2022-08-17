@@ -58,6 +58,7 @@ class App extends Component {
   }
 
   updatePeople = (updatedPerson) => {
+    console.log(updatedPerson);
     const newPeopleState = this.state.people.map(person => {
       // 👇️ update the person if the id matches 
       if (person.id == updatedPerson.id) {
