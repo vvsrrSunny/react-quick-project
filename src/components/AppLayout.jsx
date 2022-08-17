@@ -2,6 +2,7 @@
 import { Component, Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
+import TheButton from "./TheButton";
 
 const user = {
   name: "Sunny",
@@ -212,8 +213,9 @@ class UsersPage extends Component {
               )}
             </Disclosure>
             <header className="py-10">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
                 <h1 className="text-3xl font-bold text-white">Dashboard</h1>
+              <TheButton onClick={this.props.addUser}></TheButton>
               </div>
             </header>
           </div>

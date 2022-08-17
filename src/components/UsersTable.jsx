@@ -28,12 +28,21 @@ export default class UserTable extends Component {
     this.sliderLayoutRef.current.open();
 
     // send the data to the slider for the update 
-    this.setState({person: person});
+    this.setState({ person: person });
   }
 
   closeSlider = () => {
     // this.sliderLayoutRef.current.open();
     this.sliderLayoutRef.current.close();
+  }
+  openSliderForNewUser = () => {
+    this.onCellClick({
+      id: null,
+      name: null,
+      title: null,
+      email: null,
+      role: null,
+    })
   }
 
   render() {
@@ -61,7 +70,7 @@ export default class UserTable extends Component {
             ))}
           </TableLayout.Body>
         </TableLayout>
-        <TableSlider updatePeople={this.props.updatePeople} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
+        <TableSlider addOrUpdatePeople={(newOrUpdatedPerson) => this.props.addOrUpdatePeople(newOrUpdatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
       </div>
     );
   }
