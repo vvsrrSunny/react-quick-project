@@ -54,7 +54,15 @@ export default class UserTable extends Component {
 
   onClickDeletePrompt = () => {
     console.log(this.state.person);
+    const newPeopleList = this.deletePersonById(this.props.people,this.state.person.id);
+    this.props.updatedPeople(newPeopleList);
   }
+
+  deletePersonById = (array, id) => { 
+    return array.filter(function(element){ 
+        return element.id != id; 
+    });
+}
 
   render() {
     return (
