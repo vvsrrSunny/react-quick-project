@@ -52,6 +52,10 @@ export default class UserTable extends Component {
     })
   }
 
+  onClickDeletePrompt = () => {
+    console.log(this.state.person);
+  }
+
   render() {
     return (
       <div>
@@ -79,7 +83,7 @@ export default class UserTable extends Component {
           </TableLayout.Body>
         </TableLayout>
         <TableSlider addOrUpdatePeople={(newOrUpdatedPerson) => this.props.addOrUpdatePeople(newOrUpdatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
-        <ThePrompt promptOpen={this.state.promptOpen} promptOpenedCallback={() => this.setState({ promptOpen: false })} ></ThePrompt>
+        <ThePrompt promptOpen={this.state.promptOpen} promptOpenedCallback={() => this.setState({ promptOpen: false })} onClickDeletePrompt={this.onClickDeletePrompt} ></ThePrompt>
       </div>
     );
   }
