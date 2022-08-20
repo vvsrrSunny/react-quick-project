@@ -66,6 +66,7 @@ export default class UserTable extends Component {
                 <TableCell>{person.email}</TableCell>
                 <TableCell>{person.role}</TableCell>
                 <TableCellEdit person={person} onCellClick={this.onCellClick}></TableCellEdit>
+                <TableCellEdit person={person} onCellClick={this.onCellClick} buttonName ="Delete" buttonColor ="red"></TableCellEdit>
               </tr>
             ))}
           </TableLayout.Body>
