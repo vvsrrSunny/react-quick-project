@@ -11,7 +11,6 @@ export default class UserTable extends Component {
   constructor(props) {
     super(props);
     this.sliderLayoutRef = React.createRef();
-    this.thePromptRef = React.createRef();
     this.buttonRef = React.createRef();
     this.state = {
       person: {
@@ -21,6 +20,7 @@ export default class UserTable extends Component {
         email: null,
         role: null,
       },
+      promptOpen: false,
     }
   }
 
@@ -30,7 +30,7 @@ export default class UserTable extends Component {
     this.setState({ person: person });
 
     if (buttonName == 'Delete') {
-      // open the prompt 
+      this.setState({ promptOpen: true });
       return;
     }
 
@@ -79,7 +79,7 @@ export default class UserTable extends Component {
           </TableLayout.Body>
         </TableLayout>
         <TableSlider addOrUpdatePeople={(newOrUpdatedPerson) => this.props.addOrUpdatePeople(newOrUpdatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
-        <ThePrompt ref={this.thePromptRef}></ThePrompt>
+        <ThePrompt promptOpen={this.state.promptOpen} promptOpenedCallback={() => this.setState({ promptOpen: false })} ></ThePrompt>
       </div>
     );
   }

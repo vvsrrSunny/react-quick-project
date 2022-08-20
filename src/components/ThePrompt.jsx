@@ -1,12 +1,19 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useRef, useState } from 'react'
+import { Fragment, useRef, useState, useEffect } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationIcon } from '@heroicons/react/outline'
 
 export default function ThePrompt(props) {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
 
-    const cancelButtonRef = useRef(null)
+    const cancelButtonRef = useRef(null);
+    useEffect(() => {
+        if (props.promptOpen) {
+            setOpen(props.promptOpen);
+
+            props.promptOpenedCallback();
+        }
+    });
 
     return (
         <Transition.Root show={open} as={Fragment}>
