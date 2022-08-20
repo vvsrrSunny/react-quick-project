@@ -5,11 +5,13 @@ import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
 import TableCellEdit from "./TableCellEdit";
 import TableSlider from "./TableSlider";
+import ThePrompt from "./ThePrompt";
 
 export default class UserTable extends Component {
   constructor(props) {
     super(props);
     this.sliderLayoutRef = React.createRef();
+    this.thePromptRef = React.createRef();
     this.buttonRef = React.createRef();
     this.state = {
       person: {
@@ -77,6 +79,7 @@ export default class UserTable extends Component {
           </TableLayout.Body>
         </TableLayout>
         <TableSlider addOrUpdatePeople={(newOrUpdatedPerson) => this.props.addOrUpdatePeople(newOrUpdatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
+        <ThePrompt ref={this.thePromptRef}></ThePrompt>
       </div>
     );
   }

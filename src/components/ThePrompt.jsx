@@ -3,8 +3,8 @@ import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { ExclamationIcon } from '@heroicons/react/outline'
 
-export default function Example() {
-  const [open, setOpen] = useState(true)
+export default function ThePrompt(props) {
+  const [open, setOpen] = useState(false)
 
   const cancelButtonRef = useRef(null)
 
