@@ -23,12 +23,17 @@ export default class UserTable extends Component {
   }
 
   // edit table on click callback
-  onCellClick = (person) => {
-    // this.sliderLayoutRef.current.open();
-    this.sliderLayoutRef.current.open();
-
+  onCellClick = (person, buttonName) => {
     // send the data to the slider for the update 
     this.setState({ person: person });
+
+    if (buttonName == 'Delete') {
+      // open the prompt 
+      return;
+    }
+
+    // this.sliderLayoutRef.current.open();
+    this.sliderLayoutRef.current.open();
   }
 
   closeSlider = () => {
@@ -66,7 +71,7 @@ export default class UserTable extends Component {
                 <TableCell>{person.email}</TableCell>
                 <TableCell>{person.role}</TableCell>
                 <TableCellEdit person={person} onCellClick={this.onCellClick}></TableCellEdit>
-                <TableCellEdit person={person} onCellClick={this.onCellClick} buttonName ="Delete" buttonColor ="red"></TableCellEdit>
+                <TableCellEdit person={person} onCellClick={this.onCellClick} buttonName="Delete" buttonColor="red"></TableCellEdit>
               </tr>
             ))}
           </TableLayout.Body>

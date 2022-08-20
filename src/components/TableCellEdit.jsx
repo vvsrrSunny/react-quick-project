@@ -9,7 +9,7 @@ export default class TableCellEdit extends Component {
         };
     }
     cellClicked = () => {
-        this.props.onCellClick(this.props.person);
+        this.props.onCellClick(this.props.person, this.state.buttonName);
     }
     render() {
         return (
