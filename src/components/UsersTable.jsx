@@ -5,6 +5,7 @@ import TableHeaderCell from "./TableHeaderCell";
 import TableLayout from "./TableLayout";
 import TableCellEdit from "./TableCellEdit";
 import TableSlider from "./TableSlider";
+import ThePrompt from "./ThePrompt";
 
 export default class UserTable extends Component {
   constructor(props) {
@@ -19,16 +20,22 @@ export default class UserTable extends Component {
         email: null,
         role: null,
       },
+      promptOpen: false,
     }
   }
 
   // edit table on click callback
-  onCellClick = (person) => {
-    // this.sliderLayoutRef.current.open();
-    this.sliderLayoutRef.current.open();
-
+  onCellClick = (person, buttonName) => {
     // send the data to the slider for the update 
     this.setState({ person: person });
+
+    if (buttonName == 'Delete') {
+      this.setState({ promptOpen: true });
+      return;
+    }
+
+    // this.sliderLayoutRef.current.open();
+    this.sliderLayoutRef.current.open();
   }
 
   closeSlider = () => {
@@ -44,6 +51,18 @@ export default class UserTable extends Component {
       role: null,
     })
   }
+
+  onClickDeletePrompt = () => {
+    console.log(this.state.person);
+    const newPeopleList = this.deletePersonById(this.props.people,this.state.person.id);
+    this.props.updatedPeople(newPeopleList);
+  }
+
+  deletePersonById = (array, id) => { 
+    return array.filter(function(element){ 
+        return element.id != id; 
+    });
+}
 
   render() {
     return (
@@ -66,11 +85,13 @@ export default class UserTable extends Component {
                 <TableCell>{person.email}</TableCell>
                 <TableCell>{person.role}</TableCell>
                 <TableCellEdit person={person} onCellClick={this.onCellClick}></TableCellEdit>
+                <TableCellEdit person={person} onCellClick={this.onCellClick} buttonName="Delete" buttonColor="red"></TableCellEdit>
               </tr>
             ))}
           </TableLayout.Body>
         </TableLayout>
         <TableSlider addOrUpdatePeople={(newOrUpdatedPerson) => this.props.addOrUpdatePeople(newOrUpdatedPerson)} person={this.state.person} ref={this.sliderLayoutRef} ></TableSlider>
+        <ThePrompt promptOpen={this.state.promptOpen} promptOpenedCallback={() => this.setState({ promptOpen: false })} onClickDeletePrompt={this.onClickDeletePrompt} ></ThePrompt>
       </div>
     );
   }

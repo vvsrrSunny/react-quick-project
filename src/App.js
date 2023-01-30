@@ -100,7 +100,7 @@ class App extends Component {
     return (
       <div className="app">
         <AppLayout addUser={this.addUser}>
-          <UsersTable ref={this.usersTable} addOrUpdatePeople={this.addOrUpdatePeople} people={this.state.people}></UsersTable>
+          <UsersTable ref={this.usersTable} addOrUpdatePeople={this.addOrUpdatePeople} people={this.state.people} updatedPeople={(newPeopleList)=> this.setState({people:newPeopleList})}></UsersTable>
         </AppLayout>
       </div>
     );
